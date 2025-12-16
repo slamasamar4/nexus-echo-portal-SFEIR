@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Heart, Users, Info, LucideIcon } from "lucide-react";
 import { useState } from "react";
-import { AICompanionTooltip } from "./AICompanionTooltip";
 
 export type MissionType = "contact" | "donation" | "volunteer" | "info";
 
@@ -92,7 +91,7 @@ export const MissionSelector = ({ selectedMission, onSelectMission }: MissionSel
                 `}>
                   <Icon className="w-5 h-5" />
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="font-display text-sm font-semibold tracking-wide text-foreground">
                     {mission.title}
@@ -102,21 +101,8 @@ export const MissionSelector = ({ selectedMission, onSelectMission }: MissionSel
                   </p>
                 </div>
 
-                {isSelected && (
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    className="w-2 h-2 rounded-full bg-primary animate-neon-pulse"
-                  />
-                )}
+                
               </div>
-
-              {/* AI Companion Tooltip */}
-              <AICompanionTooltip
-                isVisible={isHovered && !isSelected}
-                message={mission.aiHint}
-                position="bottom"
-              />
             </motion.button>
           );
         })}

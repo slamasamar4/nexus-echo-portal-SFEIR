@@ -4,7 +4,6 @@ import { Send, Shield, Zap } from "lucide-react";
 import { MissionSelector, MissionType } from "./MissionSelector";
 import { DynamicFormFields } from "./DynamicFormFields";
 import { ConfirmationScreen } from "./ConfirmationScreen";
-import { AICompanionTooltip } from "./AICompanionTooltip";
 import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
@@ -140,54 +139,7 @@ export const IntentPortal = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 cyber-grid relative">
-      {/* AI Companion Corner Suggestion */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-        className="absolute top-6 right-6 max-w-xs z-40 lg:fixed"
-      >
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          onHoverStart={() => setShowAICompanion(true)}
-          onHoverEnd={() => setShowAICompanion(true)}
-          className="cursor-default"
-        >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.3 }}
-            className="glass-panel border border-secondary/50 rounded-xl p-4 shadow-lg shadow-secondary/20 backdrop-blur-md"
-          >
-            <div className="flex items-start gap-3">
-              <motion.span
-                animate={{ rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="text-lg flex-shrink-0"
-              >
-                🤖
-              </motion.span>
-              <div className="flex-1">
-                <p className="text-xs text-secondary/80 font-display tracking-wide mb-1">
-                  AI COMPANION
-                </p>
-                <motion.p
-                  key={selectedMission}
-                  initial={{ opacity: 0, y: 5 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-xs text-secondary/70 leading-relaxed"
-                >
-                  {selectedMission
-                    ? aiCompanionSuggestions[selectedMission]
-                    : aiCompanionSuggestions.default}
-                </motion.p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
-      </motion.div>
+     
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
