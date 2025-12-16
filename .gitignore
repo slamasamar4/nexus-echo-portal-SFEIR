@@ -1,3 +1,5 @@
+backend/ .env
+backend/ node modules 
 # Logs
 logs
 *.log
