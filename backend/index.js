@@ -22,7 +22,7 @@ const client = new OpenAI({
     // Uses the HF_API_KEY defined in the .env file
 	apiKey: HF_API_KEY, 
 });
-
+ 
 // Middleware
 app.use(cors()); 
 app.use(express.json());
