@@ -26,7 +26,6 @@ The form dynamically adapts to user intent, delivers **personalized AI-driven fe
 - Accessibility-friendly UX
 
 ---
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React, TypeScript  
@@ -34,34 +33,24 @@ The form dynamically adapts to user intent, delivers **personalized AI-driven fe
 - **AI Integration:** Hugging Face LLM via OpenAI-compatible SDK  
 - **Styling:** Responsive modern UI  
 - **Security:** dotenv for sensitive environment variables  
-
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
-
 git clone https://github.com/USERNAME/nexus-echo-form.git
 cd nexus-echo-form
 
-2. Install dependencies
+2. Install dependencies Run the application
 # Frontend
 npm install
-
+cd ../frontend
+npm run dev
 # Backend
 cd ../backend
 npm install
-
-
-3. Set up environment variables
-
-Create a .env file in the backend folder
-
-4. Run the application
-# Backend
 cd backend
 npm run start
 
-# Frontend
-cd ../frontend
-npm run dev
+3. Set up environment variables
+Create a .env file in the backend folder
